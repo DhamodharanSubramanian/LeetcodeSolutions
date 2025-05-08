@@ -5,7 +5,13 @@ int strStr(char* haystack, char* needle) {
 
     for(i = 0 ; i < strlen(haystack)  ; i++)
     {
+        if((strlen(haystack) - i) <  strlen(needle))
+        {
+            break;
+        }
+
         temp = i;
+        
         for(j = 0 ; j < strlen(needle) ; j++, temp++)
         {
             if(haystack[temp] != needle[j])
