@@ -3,13 +3,12 @@ int strStr(char* haystack, char* needle) {
     int found = -1;
     int i,j,temp;
 
-    for(i = 0 ; (strlen(haystack) - i) >= strlen(needle) ; i++)
+    for(i = 0 ; i < strlen(haystack); i++)
     {
-
-        printf("i = %d\n", i);
-        printf("strlen(haystack) = %d\n", strlen(haystack));
-        printf("strlen(needle) = %d\n", strlen(needle));
-        printf("(strlen(haystack) - strlen(needle)) = %d\n", (strlen(haystack) - strlen(needle)));
+        if((strlen(haystack) - i) < strlen(needle))
+        {
+            break;
+        }
 
         temp = i;
 
