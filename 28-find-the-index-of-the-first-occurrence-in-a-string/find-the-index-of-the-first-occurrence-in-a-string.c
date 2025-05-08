@@ -1,9 +1,9 @@
 int strStr(char* haystack, char* needle) {
 
     int found = -1;
-    unsigned int i,j,temp;
+    int i,j,temp;
 
-    for(i = 0 ; i < strlen(haystack)  ; i++)
+    for(i = 0 ; i <= (strlen(haystack) - strlen(needle)) ; i++)
     {
         if((strlen(haystack) - i) <  strlen(needle))
         {
@@ -11,7 +11,7 @@ int strStr(char* haystack, char* needle) {
         }
 
         temp = i;
-        
+
         for(j = 0 ; j < strlen(needle) ; j++, temp++)
         {
             if(haystack[temp] != needle[j])
