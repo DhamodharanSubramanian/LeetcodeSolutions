@@ -10,7 +10,7 @@ int lengthOfLastWord(char* s) {
 
     for ( i = length-1 ; i >= 0 ; i--)
     {
-        if(!word_found)
+        if(word_found == FALSE)
         {
             if(s[i] != ' ')
                 word_found = TRUE;
