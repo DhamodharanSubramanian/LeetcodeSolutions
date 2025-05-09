@@ -5,9 +5,7 @@ int searchInsert(int* nums, int numsSize, int target) {
     for(i = 0; i < numsSize ; i++)
     {
         if(nums[i] >= target)
-        {
             break;
-        }
     }
     
     return i;
